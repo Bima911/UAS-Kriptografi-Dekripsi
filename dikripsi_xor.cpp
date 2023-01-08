@@ -24,8 +24,8 @@ main(int argc, char *argv[])
     i = 0;
     while (!feof(Fin)){
         c = getc(Fin);
-        p = p ^ k[i]; //operasi XOR
-        putc(c, Fout);
+        p = c ^ k[i]; //operasi XOR
+        putc(p, Fout);
         i = (i + 1) % k.length();
     }
     fclose(Fin);
